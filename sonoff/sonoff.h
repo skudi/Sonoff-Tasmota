@@ -144,8 +144,9 @@ typedef unsigned long power_t;              // Power (Relay) type
 #define NEO_GRBW               6            // Neopixel GRBW leds
 
 #define MQTT_PUBSUBCLIENT      1            // Mqtt PubSubClient library
-#define MQTT_TASMOTAMQTT       2            // Mqtt TasmotaMqtt library based on esp-mqtt-arduino
-#define MQTT_ARDUINOMQTT       3            // Mqtt arduino-mqtt library by Joel Gaehwiler (https://github.com/256dpi/arduino-mqtt)
+#define MQTT_TASMOTAMQTT       2            // Mqtt TasmotaMqtt library based on esp-mqtt-arduino - soon obsolete
+#define MQTT_ESPMQTTARDUINO    3            // Mqtt esp-mqtt-arduino library by Ingo Randolf - obsolete but define is present for debugging purposes
+#define MQTT_ARDUINOMQTT       4            // Mqtt arduino-mqtt library by Joel Gaehwiler (https://github.com/256dpi/arduino-mqtt)
 
 // Sunrise and Sunset DawnType
 #define DAWN_NORMAL            -0.8333
@@ -213,7 +214,7 @@ enum LichtSchemes {LS_POWER, LS_WAKEUP, LS_CYCLEUP, LS_CYCLEDN, LS_RANDOM, LS_MA
 
 enum XsnsFunctions {FUNC_PRE_INIT, FUNC_INIT, FUNC_LOOP, FUNC_EVERY_50_MSECOND, FUNC_EVERY_100_MSECOND, FUNC_EVERY_200_MSECOND, FUNC_EVERY_250_MSECOND, FUNC_EVERY_SECOND, FUNC_PREP_BEFORE_TELEPERIOD,
                     FUNC_JSON_APPEND, FUNC_WEB_APPEND, FUNC_SAVE_BEFORE_RESTART, FUNC_COMMAND, FUNC_MQTT_SUBSCRIBE, FUNC_MQTT_INIT, FUNC_MQTT_DATA, FUNC_SET_POWER, FUNC_SHOW_SENSOR,
-                    FUNC_RULES_PROCESS, FUNC_SERIAL, FUNC_FREE_MEM};
+                    FUNC_RULES_PROCESS, FUNC_SERIAL, FUNC_FREE_MEM, FUNC_WEB_ADD_BUTTON, FUNC_WEB_ADD_HANDLER};
 
 const uint8_t kDefaultRfCode[9] PROGMEM = { 0x21, 0x16, 0x01, 0x0E, 0x03, 0x48, 0x2E, 0x1A, 0x00 };
 
